@@ -1,0 +1,10 @@
+XDG Base Directory Specification Helper
+---------------------------------------
+
+This small helper library can be used to determine application-specific
+configuration, data and cache directories that follow the XDG Base
+Directory Specification:
+
+http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html
+
+See README.* for alternatives if you already use libraries in your app.

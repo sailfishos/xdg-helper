@@ -1,0 +1,20 @@
+If you are using Qt 5, you can get the directories using:
+
+#include <QCoreApplication>
+#include <QStandardPaths>
+#include <QDir>
+
+/**
+ * Assumption:
+ *   QCoreApplication::applicationName() and
+ *   QCoreApplication::organizationName()
+ * are set correctly (to $APPNAME), libsailfishapp >= 0.0.13
+ * does this for you automatically if you use it in your app.
+ **/
+
+QString config_dir = QDir(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation))
+        .filePath(QCoreApplication::applicationName());
+
+QString data_dir = QStandardPaths::writableLocation(QStandardPaths::DataLocation);
+
+QString cache_dir = QStandardPaths::writableLocation(QStandardPaths::CacheLocation);

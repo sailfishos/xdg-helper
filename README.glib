@@ -1,0 +1,18 @@
+If you are using GLib, you can get the directories using:
+
+#include <glib.h>
+
+gchar *appname = g_path_get_basename(argv[0]);
+
+gchar *config_dir = g_build_filename(g_get_user_config_dir(), appname, NULL);
+// ... do something with config_dir ...
+g_free(config_dir);
+
+gchar *data_dir = g_build_filename(g_get_user_data_dir(), appname, NULL);
+// ... do something with data_dir ...
+
+gchar *cache_dir = g_build_filename(g_get_user_cache_dir(), appname, NULL);
+// ... do something with cache_dir ...
+g_free(cache_dir);
+
+g_free(appname);
