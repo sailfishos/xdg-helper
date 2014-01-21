@@ -10,6 +10,7 @@ g_free(config_dir);
 
 gchar *data_dir = g_build_filename(g_get_user_data_dir(), appname, NULL);
 // ... do something with data_dir ...
+g_free(data_dir);
 
 gchar *cache_dir = g_build_filename(g_get_user_cache_dir(), appname, NULL);
 // ... do something with cache_dir ...
